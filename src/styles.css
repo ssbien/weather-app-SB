@@ -44,3 +44,7 @@ form {
   margin-left: auto;
   border-radius: 10px;
 }
+.git-link {
+  margin: 0 auto;
+  text-align: center;
+}
