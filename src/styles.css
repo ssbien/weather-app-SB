@@ -1,0 +1,46 @@
+body {
+  font-family: "Comfortaa", cursive;
+  color: white;
+  margin: 60px auto;
+}
+h1 {
+  text-align: center;
+  padding-top: 25px;
+}
+form {
+  margin: 25px auto;
+}
+.temperature {
+  font-size: 75px;
+  text-align: center;
+  font-weight: bold;
+}
+.main-temp {
+  text-align: center;
+  position: relative;
+  left: 20px;
+}
+.weather-date {
+  text-align: center;
+  font-size: 14px;
+}
+.forecast {
+  text-align: center;
+  margin: 15px auto;
+  padding-bottom: 25px;
+}
+.forecast-temperature {
+  margin: 10px auto;
+}
+.forecast-date {
+  margin: 8px auto;
+}
+.container {
+  background: #9aa6de;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
+}
