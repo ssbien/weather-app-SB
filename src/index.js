@@ -32,10 +32,10 @@ today.innerHTML = formatDate(now);
 //
 
 function displayWeather(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
 
   document.querySelector("#weather-type").innerHTML =
     response.data.weather[0].main;
@@ -72,23 +72,29 @@ form.addEventListener("submit", submit);
 searchCity("New York");
 
 // C to F
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 26;
-}
+let celsiusTemperature = null;
 
 function convertToFahrenheit(event) {
   event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 80;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-//let celsius = document.querySelector("#celsius");
-//celsius.addEventListener("click", convertToCelsius);
+function convertToCelsius(event) {
+  event.preventDefault();
+  fahrenheit.classList.remove("active");
+  celsius.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
-//let fahrenheit = document.querySelector("#fahrenheit");
-//fahrenheit.addEventListener("click", convertToFahrenheit);
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", convertToCelsius);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", convertToFahrenheit);
 
 //
