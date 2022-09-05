@@ -10,6 +10,9 @@ h1 {
 form {
   margin: 25px auto;
 }
+img {
+  object-position: 0px -20px;
+}
 .temperature {
   font-size: 75px;
   text-align: center;
@@ -18,7 +21,7 @@ form {
 .main-temp {
   text-align: center;
   position: relative;
-  left: 20px;
+  left: -20px;
 }
 .weather-date {
   text-align: center;
@@ -51,4 +54,7 @@ form {
 .active {
   text-decoration: none;
   color: black;
+}
+.speed {
+  color: #32323a;
 }
