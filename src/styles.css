@@ -10,9 +10,6 @@ h1 {
 form {
   margin: 25px auto;
 }
-img {
-  object-position: 0px -20px;
-}
 .temperature {
   font-size: 75px;
   text-align: center;
@@ -39,7 +36,7 @@ img {
   margin: 8px auto;
 }
 .container {
-  background: #9aa6de;
+  background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -50,11 +47,16 @@ img {
 .git-link {
   margin: 0 auto;
   text-align: center;
+  color: #32323a;
+  font-size: 12px;
 }
 .active {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .speed {
   color: #32323a;
+}
+.main-icon {
+  object-position: 0px -20px;
 }
